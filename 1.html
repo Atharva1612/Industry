@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter.js Example</title>
+    <script src="https://unpkg.com/@tombruijn/counter@latest/dist/counter.min.js"></script>
+    <style>
+        #counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<div id="counter">0</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const counter = new Counter(document.getElementById('counter'), {
+            start: 0,        // Starting value
+            end: 100,        // Target value
+            duration: 2000,  // Duration in milliseconds (2 seconds)
+            delay: 10,       // Delay between increments in ms
+            once: true       // Only run once
+        });
+
+        counter.start();
+    });
+</script>
+
+</body>
+</html>
